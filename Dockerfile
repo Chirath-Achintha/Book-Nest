@@ -9,5 +9,5 @@ RUN mvn clean package -DskipTests
 FROM eclipse-temurin:21-jre-jammy
 WORKDIR /app
 COPY --from=build /app/target/booknest-1.0.0.war app.war
-EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "-Dserver.port=8080", "app.war"]
+EXPOSE 7860
+ENTRYPOINT ["java", "-jar", "-Dserver.port=7860", "app.war"]
