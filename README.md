@@ -9,3 +9,11 @@ license: mit
 ---
 
 # Book-Nest
+
+
+
+Hardcoded admin login:
+
+Username: admin
+Email: admin@booknest.local
+Password: admin123

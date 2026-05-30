@@ -28,6 +28,11 @@ public class AuthController {
     @Autowired
     private AdminAuthService adminAuthService;
 
+    // Hardcoded admin credentials for admin panel login
+    private static final String HARDCODED_ADMIN_USERNAME = "admin";
+    private static final String HARDCODED_ADMIN_PASSWORD = "admin123";
+    private static final String HARDCODED_ADMIN_EMAIL = "admin@booknest.local";
+
     // PasswordEncoder removed along with Spring Security
 
     // GET mappings for /login and /register are in HomeController
@@ -77,6 +82,25 @@ public class AuthController {
         try {
             // First check if it's an admin login
             Optional<AdminStaff> adminOpt = adminAuthService.authenticateAdmin(email, password);
+
+            if (adminOpt.isEmpty()) {
+                // Fallback to hardcoded admin credentials
+                if ((HARDCODED_ADMIN_USERNAME.equalsIgnoreCase(email) || HARDCODED_ADMIN_EMAIL.equalsIgnoreCase(email))
+                        && HARDCODED_ADMIN_PASSWORD.equals(password)) {
+                    AdminStaff hardcodedAdmin = new AdminStaff();
+                    hardcodedAdmin.setAdminId(null);
+                    hardcodedAdmin.setUsername(HARDCODED_ADMIN_USERNAME);
+                    hardcodedAdmin.setPassword(HARDCODED_ADMIN_PASSWORD);
+                    hardcodedAdmin.setEmail(HARDCODED_ADMIN_EMAIL);
+                    hardcodedAdmin.setName("Administrator");
+                    hardcodedAdmin.setRole(SessionUtils.ROLE_SUPER_ADMIN);
+                    hardcodedAdmin.setIsActive(true);
+                    hardcodedAdmin.setCreatedAt(java.time.LocalDateTime.now());
+                    hardcodedAdmin.setUpdatedAt(java.time.LocalDateTime.now());
+                    adminOpt = Optional.of(hardcodedAdmin);
+                }
+            }
+
             if (adminOpt.isPresent()) {
                 AdminStaff admin = adminOpt.get();
                 
