@@ -962,13 +962,13 @@
                     <span class="off">OFF</span>
                 </div>
                 <div class="book-card-hero">
-                    <img src="${pageContext.request.contextPath}/images/book_cover_1.png" alt="The Obsidian Crown">
+                    <img src="https://cdn.jsdelivr.net/gh/Chirath-Achintha/Book-Nest@main/src/main/resources/static/images/book_cover_1.png" alt="The Obsidian Crown">
                 </div>
                 <div class="book-card-hero">
-                    <img src="${pageContext.request.contextPath}/images/book_cover_2.png" alt="Whispers of the Wind">
+                    <img src="https://cdn.jsdelivr.net/gh/Chirath-Achintha/Book-Nest@main/src/main/resources/static/images/book_cover_2.png" alt="Whispers of the Wind">
                 </div>
                 <div class="book-card-hero">
-                    <img src="${pageContext.request.contextPath}/images/book_cover_3.png" alt="The Forgotten Garden">
+                    <img src="https://cdn.jsdelivr.net/gh/Chirath-Achintha/Book-Nest@main/src/main/resources/static/images/book_cover_3.png" alt="The Forgotten Garden">
                 </div>
             </div>
         </div>
