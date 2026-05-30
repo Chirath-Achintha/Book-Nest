@@ -962,13 +962,13 @@
                     <span class="off">OFF</span>
                 </div>
                 <div class="book-card-hero">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='200'%3E%3Crect fill='%23667788' width='140' height='200'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' fill='white' font-size='16'%3EBook 1%3C/text%3E%3C/svg%3E" alt="Book">
+                    <img src="${pageContext.request.contextPath}/images/book_cover_1.png" alt="The Obsidian Crown">
                 </div>
                 <div class="book-card-hero">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='200'%3E%3Crect fill='%2366b8aa' width='140' height='200'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' fill='white' font-size='16'%3EBook 2%3C/text%3E%3C/svg%3E" alt="Book">
+                    <img src="${pageContext.request.contextPath}/images/book_cover_2.png" alt="Whispers of the Wind">
                 </div>
                 <div class="book-card-hero">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='200'%3E%3Crect fill='%23889966' width='140' height='200'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' fill='white' font-size='16'%3EBook 3%3C/text%3E%3C/svg%3E" alt="Book">
+                    <img src="${pageContext.request.contextPath}/images/book_cover_3.png" alt="The Forgotten Garden">
                 </div>
             </div>
         </div>
